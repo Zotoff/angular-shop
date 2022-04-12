@@ -4,4 +4,6 @@ import { Component } from '@angular/core';
     templateUrl: 'header.component.html', // файл шаблона компонента 
     styleUrls: ['header.component.scss'] // файл стилизации 
   }) 
-export class HeaderComponent{}
+export class HeaderComponent{
+  collapsed = true;
+}
