@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 @Component({ // декоратор компонента со свойствами 
     selector: 'app-header', // селектор, куда компонент будет вставляться 
     templateUrl: 'header.component.html', // файл шаблона компонента 
@@ -6,4 +6,11 @@ import { Component } from '@angular/core';
   }) 
 export class HeaderComponent{
   collapsed = true;
+
+  @Output() featureSelected = new EventEmitter<string>(); // to the parent component
+
+  onSelect(feature: string) {
+    this.featureSelected.emit(feature);
+  }
+  
 }

@@ -4,4 +4,10 @@ import { Component } from '@angular/core';
     templateUrl: './app.component.html', // файл шаблона компонента 
     styleUrls: ['./app.component.scss'] // файл стилизации 
   }) 
-export class AppComponent{}
+export class AppComponent{
+  loadedFeature = 'recipe';
+
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
+  }
+}
